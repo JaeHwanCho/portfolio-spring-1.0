@@ -28,4 +28,14 @@ public class UserController {
     public BaseResponse<Long> addUser(@RequestBody AddUserDto addUserDto) {
         return new BaseResponse<>(userService.addUser(addUserDto));
     }
+
+    @PostMapping("/user-authenticate-by-code")
+    public BaseResponse<String> authenticatedByEmail(@RequestParam String nickname) {
+        return new BaseResponse<>(userService.authenticatedByEmail(nickname));
+    }
+
+    @PostMapping("/user-check-code")
+    public BaseResponse<String> checkCode(@RequestParam String nickname, @RequestParam String code) {
+        return new BaseResponse<>(userService.checkCode(nickname, code));
+    }
 }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>인증 코드 안내</title>
+    <meta charset="UTF-8">
+</head>
+<body style="margin: 0; font-family: Pretendard, sans-serif; background-color: #f7f7f7; padding: 20px;">
+
+<div style="max-width: 520px; margin: 0 auto; background-color: #ffffff; padding: 40px; border-radius: 10px;">
+    <h2 style="font-size: 24px; color: #333; margin-top: 0;">인증 코드를 확인해 주세요.</h2>
+    <p style="font-size: 16px; color: #555; line-height: 1.6;">
+        안녕하세요, <strong th:text="${nickname}">사용자</strong>님! <br>
+        요청하신 인증 코드는 아래와 같습니다.
+    </p>
+
+    <div style="background-color: #f0f6ff; margin: 25px 0; padding: 20px; text-align: center; border-radius: 8px;">
+        <p style="font-size: 32px; font-weight: bold; color: #005ce6; letter-spacing: 5px; margin: 0;" th:text="${code}">123456</p>
+    </div>
+
+    <p style="font-size: 14px; color: #888;">
+        이 코드는 **5분** 동안 유효합니다. <br>
+        본인이 요청하지 않았다면 이 이메일을 무시해 주세요.
+    </p>
+</div>
+
+</body>
+</html>

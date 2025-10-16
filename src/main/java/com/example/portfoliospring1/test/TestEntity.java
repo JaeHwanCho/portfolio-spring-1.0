@@ -1,4 +1,4 @@
-package com.example.portfoliospring1.domain.entity;
+package com.example.portfoliospring1.test;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,13 +10,12 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class User extends BaseEntity
-{
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String nickname;
-    private String email;
-    private String password;
+public class TestEntity {
 
-    Boolean authenticated;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
+
+    Long count;
+
+    String redis;
 }
